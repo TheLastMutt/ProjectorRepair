@@ -18,7 +18,7 @@ Disassembling and reassembling the projector sucks, cursing might ensue.
 
 # Summary
 
-On the lamp ballast board IC1 (LNK364 or LNK363) generates an internal low voltage from the high input voltage. Feedback resistors are 2.2k and 20k, so effectively dividing the output voltage by 10. According the the datasheet the feedback pin threshold voltage is nominal 1.63V (specified limits 1.53V to 1.73V). This leads to an output voltage in the range of 15.3 to 17.3V (excluding resistor tolerance). I measured about 16.5V.
+On the lamp ballast board IC1 (LNK364 or LNK363) generates an internal low voltage from the high input voltage. Feedback resistors are 2.2k and 20k, so effectively dividing the output voltage by 10. According to the datasheet the feedback pin threshold voltage is nominal 1.63V (specified limits 1.53V to 1.73V). This leads to an output voltage in the range of 15.3 to 17.3V (excluding resistor tolerance). I measured about 16.5V.
 
 This voltage is used as supply voltage for a switching regulator IC M51995AFP on the vertical daughter board. The datasheet for this IC specifies the start-up voltage as nominal 16.2V (limits 15.2V to 17.2V).
 
@@ -38,7 +38,7 @@ When you disassemble your projector, don't forget to check (and reverse if neces
 
 ## Check issues reported on forums
 
-Searching the web for the error symptoms of the projector I quickly found the "lamp ballast" threads. This board is apparently a 3rd party component made by Rubycon. In some cases the the LNK chip and supporting components (e.g. the through-hole resistor) are blown. Other people report broken optocouplers. If everything looks OK, replacing the M51995 sometimes seems to fix the issue.
+Searching the web for the error symptoms of the projector I quickly found the "lamp ballast" threads. This board is apparently a 3rd party component made by Rubycon. In some cases the LNK chip and supporting components (e.g. the through-hole resistor) are blown. Other people report broken optocouplers. If everything looks OK, replacing the M51995 sometimes seems to fix the issue.
 
 I took the lamp ballast board out of the projector and checked these things. My optocouplers were OK. To check the LNK chip I attached a laboratory power supply to the power input connector and at 30V the LNK was already running and generating an output voltage. The datasheet says that the minimum supply voltage is 50V, so you may need a higher voltage and the output voltage may not be perfectly stabilized at such low input voltage. 
 
